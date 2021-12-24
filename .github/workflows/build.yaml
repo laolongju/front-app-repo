@@ -45,8 +45,8 @@ jobs:
           ECR_REPOSITORY: demo-frontend
           IMAGE_TAG: ${{ steps.image.outputs.version }}
         run: |
-          echo "::set-output name=ecr_repository::$ECR_REPOSITORY"
+          echo "::set-output name=ecr_repository::304165982753.dkr.ecr.ap-northeast-1.amazonaws.com"
           echo "::set-output name=image_tag::$IMAGE_TAG"
-          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+          docker build -t 304165982753.dkr.ecr.ap-northeast-1.amazonaws.com/$ECR_REPOSITORY:$IMAGE_TAG .
           docker push 304165982753.dkr.ecr.ap-northeast-1.amazonaws.com/$ECR_REPOSITORY:$IMAGE_TAG
 
